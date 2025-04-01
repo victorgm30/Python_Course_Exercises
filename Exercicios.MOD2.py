@@ -83,20 +83,132 @@
 # * Escreve um algoritmo que leia o salário do funcionário e seu tempo de empresa.
 # * e apresente a bonificação de cada funcionário na tela.
 
-salario = float(input('Qual seu salário?'))
-ano_admissao = int(input('Qual seu ano de admissão?'))
-ano_atual = int(input('Qual o ano atual?'))
+# salario = float(input('Qual seu salário?'))
+# ano_admissao = int(input('Qual seu ano de admissão?'))
+# ano_atual = int(input('Qual o ano atual?'))
+#
+# tempo = ano_atual - ano_admissao
+# if tempo > 10:
+#     bonus = salario * 0.3
+# else:
+#     if tempo > 5:
+#         bonus = salario * 0.2
+#     else:
+#         bonus = salario * 0.1
+#
+# print(f'Você tem {tempo} anos dentro da empresa.')
+# print(f'Seu salário é de {salario}.')
+# print(f'Sua bonificação será de {bonus}.')
+# print(f'Salário final:{salario + bonus}.')
 
-tempo = ano_atual - ano_admissao
-if tempo > 10:
-    bonus = salario * 0.3
+# ? Exercício 6
+# * Escreva um algoritmo em Python em que o usuário escolhe se ele quer comprar maçãs, laranjas ou bananas.
+# * Deverá apresentar na tela um menu com as opções 1,2 e 3.
+# * Após, digitar quantas unidades se quer comprar.
+# * O algoritmo deve calcular o preço total a pagar do produto escolhido e mostra-lo na tela.
+# * Considere, Maçã: 2,30 - Laranja: 3,60 - Banana: 1,85.
+
+# print('Escolha a fruta que deseja comprar:')
+# print('1 - Maçã')
+# print('2 - Laranja')
+# print('3 - Banana')
+# produto = int(input('Qual é a fruta?'))
+# qtd = int(input('Quantas unidades?'))
+#
+# if (produto == 1):
+#     pagar = qtd * 2.3
+#     print(f'Você comprou {qtd} Maças. Total à pagar: ${pagar}')
+# else:
+#     if (produto == 2):
+#         pagar = qtd * 3.6
+#         print(f'Você comprou {qtd} Laranjas. Total à pagar: ${pagar}')
+#     else:
+#         if (produto == 3):
+#             pagar = qtd * 1.85
+#             print(f'Você comprou {qtd} Bananas. Total à pagar: ${pagar}')
+#         else:
+#             print('Produto inválido.')
+
+# COM ELIF
+# print('Escolha a fruta que deseja comprar:')
+# print('1 - Maçã')
+# print('2 - Laranja')
+# print('3 - Banana')
+# produto = int(input('Qual é a fruta?'))
+# qtd = int(input('Quantas unidades?'))
+#
+# if (produto == 1):
+#     pagar = qtd * 2.3
+#     print(f'Você comprou {qtd} Maças. Total à pagar: ${pagar}')
+# elif (produto == 2):
+#     pagar = qtd * 3.6
+#     print(f'Você comprou {qtd} Laranjas. Total à pagar: ${pagar}')
+# elif (produto == 3):
+#     pagar = qtd * 1.85
+#     print(f'Você comprou {qtd} Bananas. Total à pagar: ${pagar}')
+# else:
+#     print('Produto inválido.')
+
+# ? Exercício 8
+# Escreva um algoritmo onde o usuário insere a operação e os números. Exiba na tela o resultado da operação.
+
+# print('CALCULADORA')
+# print('+ Adição')
+# print('- Subtração')
+# print('* Multiplicação')
+# print('/ Divisão')
+# print('Digite outra tecla para sair.')
+#
+# op = input('Qual operação?')
+# x = int(input('Digite o primeiro valor: '))
+# y = int(input('Digite o segundo valor: '))
+#
+# if op == "+":
+#     res = x + y
+#     print(f'Resultado: {x} + {y} = {res}')
+# elif op == "-":
+#     res = x - y
+#     print(f'Resultado: {x} - {y} = {res}')
+# elif op == "*":
+#     res = x * y
+#     print(f'Resultado: {x} * {y} = {res}')
+# elif op == "/":
+#     res = x / y
+#     print(f'Resultado: {x} / {y} = {res}')
+# else:
+#     print('Operação inválida.')
+
+# ? Exercício 9
+# * Faça um algoritmo que leia o valor total da compra de uma loja e calcule o valor do pagamento final.
+# ! Pagamento à vista - 5% de desconto;
+# ! Pagamento em 3x - sem alterações;
+# ! Pagamento em 5x - 3% de acréscimo;
+# ! Pagamento em 10x - 8% de acréscimo.
+
+print('PAGAMENTO')
+print('1 - à vista')
+print('2 - parcelamento em 3x')
+print('3 - parcelamento em 5x')
+print('4 - parcelamento em 10x')
+print('Pressione qualquer tecla para sair...')
+
+op = int(input('Forma de pagamento?'))
+valor = float(input('Qual é o preço?'))
+
+if op == 1:
+    valor_final = valor * 0.95
+    print(f'Produto comprado à vista. Total a pagar: {valor_final}')
+elif op == 2:
+    valor_final = valor
+    parcela = valor_final / 3
+    print(f'Produto parcelado em 3x. Total a pagar: {valor_final}. Valor da parcela: {parcela:.2f}')
+elif op == 3:
+    valor_final = valor * 1.03
+    parcela = valor_final / 5
+    print(f'Produto parcelado em 5x. Total a pagar: {valor_final}. Valor da parcela: {parcela:.2f}')
+elif op == 4:
+    valor_final = valor * 1.08
+    parcela = valor_final / 10
+    print(f'Produto parcelado em 10x. Total a pagar: {valor_final}. Valor da parcela: {parcela:.2f}')
 else:
-    if tempo > 5:
-        bonus = salario * 0.2
-    else:
-        bonus = salario * 0.1
-
-print(f'Você tem {tempo} anos dentro da empresa.')
-print(f'Seu salário é de {salario}.')
-print(f'Sua bonificação será de {bonus}.')
-print(f'Salário final:{salario + bonus}.')
+    print('Opção inválida.')

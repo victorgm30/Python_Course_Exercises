@@ -50,18 +50,18 @@
 # * Crie duas variáveis de teste. Uma que testa se a soma é maior do que 10.
 # * Outra que teste se a subtração é menor do que 0. Imprima tudo na tela.
 
-# x = float(input('Digite um número:'))
-# y = float(input('Digite um segundo número:'))
-#
-# soma = x + y
-# sub = x - y
-# testeA = soma > 10
-# testeB = sub < 0
-#
-#
-# print(f'Soma: {soma:.2f}. Subtração: {sub:.1f}.')
-# print(f'A soma é maior do que 10? {testeA}. ')
-# print(f'A subtração é menor do que 0? {testeB}. ')
+x = float(input('Digite um número:'))
+y = float(input('Digite um segundo número:'))
+
+soma = x + y
+sub = x - y
+testeA = soma > 10
+testeB = sub < 0
+
+
+print(f'Soma: {soma:.2f}. Subtração: {sub:.1f}.')
+print(f'A soma é maior do que 10? {testeA}. ')
+print(f'A subtração é menor do que 0? {testeB}. ')
 
 
 
